@@ -10,6 +10,6 @@ $ rm -f "${HOME}"/.{yabai,skhd}rc
 
 # Install configs
 $ git clone https://github.com/z20240/yabai.git "${HOME}"/.config/yabai
-$ ln -s "${HOME}/.config/yabai/yabairc" "${HOME}/.yabairc"
-$ ln -s "${HOME}/.config/yabai/skhdrc" "${HOME}/.skhdrc"
+$ ln -s "${HOME}/.config/yabai/yabai/yabairc" "${HOME}/.yabairc"
+$ ln -s "${HOME}/.config/yabai/skhd/skhdrc" "${HOME}/.skhdrc"
 ```
