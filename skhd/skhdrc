@@ -175,20 +175,21 @@ alt + cmd - right : yabai -m window --swap east
 alt + cmd - up : yabai -m window --swap north
 alt + cmd - down : yabai -m window --swap south
 
+## moving window
+shift + alt + cmd - left : yabai -m window --warp west
+shift + alt + cmd - right : yabai -m window --warp east
+shift + alt + cmd - up : yabai -m window --warp south
+shift + alt + cmd - down : yabai -m window --warp north
+
 ## focus window
 ctrl + alt + cmd - left : yabai -m window --focus west
 ctrl + alt + cmd - right : yabai -m window --focus east
 ctrl + alt + cmd - up : yabai -m window --focus north
 ctrl + alt + cmd - down : yabai -m window --focus south
 
-# yabai -m window --move rel:4:4
-# shift + alt - j : yabai -m window --swap south
-# shift + alt - k : yabai -m window --swap north
-# hyper - 0x21 : yabai -m window --swap east # 0x21 is the "[" key
-
 ## send window to monitor and follow focus
-ctrl + alt - left : sh ~/.config/skhd/moveWindowToLeft.sh display
-ctrl + alt - right : sh ~/.config/skhd/moveWindowToRight.sh display
+ctrl + alt - left : sh ~/.config/yabai/skhd/moveWindowToLeft.sh display
+ctrl + alt - right : sh ~/.config/yabai/skhd/moveWindowToRight.sh display
 
 ## focus display
 ctrl + alt - 1 : yabai -m window --display 1 yabai -m display --focus 1
@@ -201,19 +202,36 @@ ctrl + alt + cmd - end : yabai -m window --resize right:20:0 || yabai -m window 
 ctrl + alt + cmd - pageup : yabai -m window --resize top:0:-20 || yabai -m window --resize bottom:0:-20
 ctrl + alt + cmd - pagedown : yabai -m window --resize top:0:20 || yabai -m window --resize bottom:0:20
 
-## rotate tree 90
-hyper - r : yabai -m space --rotate 90
+## Equalize size of windows
+ctrl + alt + cmd - space : yabai -m space --balance
+
+## Enable / Disable gaps in current workspace
+alt + cmd - g : yabai -m space --toggle padding; yabai -m space --toggle gap
+
+## Float / Unfloat window
+shift + alt - space : yabai -m window --toggle float; yabai -m window --toggle border
+
+# yabai -m window --move rel:4:4
+# shift + alt - j : yabai -m window --swap south
+# shift + alt - k : yabai -m window --swap north
+# hyper - 0x21 : yabai -m window --swap east # 0x21 is the "[" key
+
+## Rotate windows clockwise and anticlockwise
+alt - r         : yabai -m space --rotate 270
+shift + alt - r : yabai -m space --rotate 90
 
 ## flip the tree vertically
-hyper - 4 : yabai -m space --mirror y-axis
+# alt - i : yabai -m space --mirror y-axis
+## flip the tree horizontal 0x6D is "-"
+# alt - 0x6D : yabai -m space --mirror x-axis
 # mirror tree y-axis
 #alt - y : yabai -m space --mirror y-axis
 ## mirror tree x-axis
 #alt - x : yabai -m space --mirror x-axis
 
 # Move active window to next space on current display
-ctrl + cmd - left : sh ~/.config/skhd/moveWindowToLeft.sh space
-ctrl + cmd - right : sh ~/.config/skhd/moveWindowToRight.sh space
+ctrl + cmd - left : sh ~/.config/yabai/skhd/moveWindowToLeft.sh space
+ctrl + cmd - right : sh ~/.config/yabai/skhd/moveWindowToRight.sh space
 # shift + lalt + lcmd + ctrl + ralt - 1 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '1' ]]; then yabai -m window --space 2; elif [[ '{}' = '2' ]]; then yabai -m window --space 1; fi"
 # shift + lalt + lcmd + ctrl + ralt - 2 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '3' ]]; then yabai -m window --space 4; elif [[ '{}' = '4' ]]; then yabai -m window --space 3; fi"
 # shift + lalt + lcmd + ctrl + ralt - 3 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '5' ]]; then yabai -m window --space 6; elif [[ '{}' = '6' ]]; then yabai -m window --space 5; fi"
