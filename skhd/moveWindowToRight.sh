@@ -10,6 +10,9 @@ case $inputAction in
 'space')
   $(yabai -m window --space next || yabai -m window --space first)
   ;;
+*)
+  $(yabai -m window --space $inputAction)
+  ;;
 esac
 
 $(yabai -m window --focus "$curWindowId")
