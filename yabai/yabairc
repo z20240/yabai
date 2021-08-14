@@ -48,11 +48,11 @@ yabai -m config mouse_drop_action            stack
 # bsp or float (default: bsp)
 yabai -m config layout                       bsp
 ## Change how yabai looks
-yabai -m config top_padding                  12
-yabai -m config bottom_padding               12
-yabai -m config left_padding                 12
-yabai -m config right_padding                12
-yabai -m config window_gap                   12
+yabai -m config top_padding                  08
+yabai -m config bottom_padding               08
+yabai -m config left_padding                 08
+yabai -m config right_padding                08
+yabai -m config window_gap                   16
 
 # My custom space names for my 3 monitor setup. These names are used in some of my scripts.
 yabai -m space 1 --label one
@@ -106,6 +106,8 @@ yabai -m rule --add app="^Private Internet Access$" manage=off
 # yabai -m signal --add event=application_terminated action="terminal-notifier -message 'application_terminated'"
 
 ## If I close the active window, focus on any other visible window.
+yabai -m signal --add event=window_destroyed action="bash ~/.config/yabai/scripts/windowFocusOnDestroy.sh"
+
 # yabai -m signal --add event=space_changed action="export CUR_ACTIVE_APP=\"iTerm2\""
 
 echo "yabai configuration loaded.."

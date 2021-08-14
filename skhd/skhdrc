@@ -214,23 +214,23 @@ ctrl + alt + cmd - pageup : yabai -m window --resize top:0:-20 || yabai -m windo
 ctrl + alt + cmd - pagedown : yabai -m window --resize top:0:20 || yabai -m window --resize bottom:0:20
 
 ## send window to next monitor and follow focus
-ctrl + alt - left : sh ~/.config/yabai/skhd/moveWindowToLeft.sh display
-ctrl + alt - right : sh ~/.config/yabai/skhd/moveWindowToRight.sh display
+ctrl + alt - left : sh ~/.config/yabai/scripts/moveWindowToLeft.sh display
+ctrl + alt - right : sh ~/.config/yabai/scripts/moveWindowToRight.sh display
 
 ## send window to next space on and follow focus
-ctrl + cmd - left : sh ~/.config/yabai/skhd/moveWindowToLeft.sh space
-ctrl + cmd - right : sh ~/.config/yabai/skhd/moveWindowToRight.sh space
+ctrl + cmd - left : sh ~/.config/yabai/scripts/moveWindowToLeft.sh space
+ctrl + cmd - right : sh ~/.config/yabai/scripts/moveWindowToRight.sh space
 
 ## send window to specify space
-ctrl + cmd - 1 : sh ~/.config/yabai/skhd/moveWindowToLeft.sh 1
-ctrl + cmd - 2 : sh ~/.config/yabai/skhd/moveWindowToLeft.sh 2
-ctrl + cmd - 3 : sh ~/.config/yabai/skhd/moveWindowToLeft.sh 3
-ctrl + cmd - 4 : sh ~/.config/yabai/skhd/moveWindowToLeft.sh 4
-ctrl + cmd - 5 : sh ~/.config/yabai/skhd/moveWindowToLeft.sh 5
-ctrl + cmd - 6 : sh ~/.config/yabai/skhd/moveWindowToLeft.sh 6
-ctrl + cmd - 7 : sh ~/.config/yabai/skhd/moveWindowToLeft.sh 7
-ctrl + cmd - 8 : sh ~/.config/yabai/skhd/moveWindowToLeft.sh 8
-ctrl + cmd - 9 : sh ~/.config/yabai/skhd/moveWindowToLeft.sh 9
+ctrl + cmd - 1 : sh ~/.config/yabai/scripts/moveWindowToLeft.sh 1
+ctrl + cmd - 2 : sh ~/.config/yabai/scripts/moveWindowToLeft.sh 2
+ctrl + cmd - 3 : sh ~/.config/yabai/scripts/moveWindowToLeft.sh 3
+ctrl + cmd - 4 : sh ~/.config/yabai/scripts/moveWindowToLeft.sh 4
+ctrl + cmd - 5 : sh ~/.config/yabai/scripts/moveWindowToLeft.sh 5
+ctrl + cmd - 6 : sh ~/.config/yabai/scripts/moveWindowToLeft.sh 6
+ctrl + cmd - 7 : sh ~/.config/yabai/scripts/moveWindowToLeft.sh 7
+ctrl + cmd - 8 : sh ~/.config/yabai/scripts/moveWindowToLeft.sh 8
+ctrl + cmd - 9 : sh ~/.config/yabai/scripts/moveWindowToLeft.sh 9
 
 ## focus display
 ctrl + alt - 1 : yabai -m window --display 1 ; yabai -m display --focus 1
