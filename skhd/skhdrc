@@ -158,7 +158,7 @@
 ### ============================================================================ ###
 
 ## Quickly restart the yabai launch agent (快速重啟 yabai & skhd)
-alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai" && launchctl kickstart -k "gui/${UID}/homebrew.mxcl.skhd"
+ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai" && launchctl kickstart -k "gui/${UID}/homebrew.mxcl.skhd"
 
 ## Close active application (快速關閉視窗)
 alt + cmd - backspace : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
@@ -188,7 +188,7 @@ alt + cmd - r         : yabai -m space --rotate 270
 shift + alt + cmd - r : yabai -m space --rotate 90
 
 ## float / Unfloat window (float 視窗)
-ctrl + alt + cmd - space : yabai -m window --toggle float ; yabai -m window --toggle border ; yabai -m window --grid 12:12:1:1:9:9
+ctrl + alt + cmd - space : yabai -m window --toggle float ;  yabai -m window --grid 12:12:1:1:9:9
 
 ## stack window
 # Note that this only works when the active window does *not* already belong to a stack
