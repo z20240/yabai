@@ -66,29 +66,32 @@ yabai -m space 9 --label nine
 # float system preferences. Most of these just diable Yabai form resizing them.
 yabai -m rule --add app="^系統偏好設定$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
+yabai -m rule --add app="^系統資訊$" sticky=on layer=above manage=off
+yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
+yabai -m rule --add app="^活動監視器$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
 yabai -m rule --add app="^LINE$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Hammerspoon$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Keka$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Alfred Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Disk Utility$" sticky=on layer=above manage=off
-yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
+yabai -m rule --add app="^磁碟工具程式$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Path Finder$" manage=off
 yabai -m rule --add app="^TeamViewer$" sticky=off layer=above manage=off
-yabai -m rule --add app="Fantastical" manage=off
-yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Flux$" manage=off
 yabai -m rule --add app="^Time Out$" manage=off
 yabai -m rule --add app="^perl_client_app$" manage=off
-yabai -m rule --add app="^console$" manage=off
-yabai -m rule --add app="^Harvest$" manage=off
 yabai -m rule --add app="^CiscoSparkHelper$" manage=off
-yabai -m rule --add app="^Logi Options$" manage=off
-yabai -m rule --add app="^Cisco Webex Start$" manage=off
-yabai -m rule --add app="^Private Internet Access$" manage=off
+# yabai -m rule --add app="^Logi Options$" manage=off
+# yabai -m rule --add app="^Cisco Webex Start$" manage=off
+# yabai -m rule --add app="^Private Internet Access$" manage=off
+# yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
+# yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
+# yabai -m rule --add app="^Keka$" sticky=on layer=above manage=off
+# yabai -m rule --add app="Fantastical" manage=off
+# yabai -m rule --add app="^Spotify$" manage=off
+# yabai -m rule --add app="^console$" manage=off
+# yabai -m rule --add app="^Harvest$" manage=off
 
 # find ~/Library/Parallels/Applications\ Menus/ -maxdepth 3 -type f | awk -F'/' '{ print $NF; }' | awk '{$1=$1};1' | sort | uniq | tr "\n" "\0" | xargs -0 -I{} yabai -m rule --add app="^{}\$" title=".*" manage=on
 
