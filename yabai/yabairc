@@ -73,6 +73,7 @@ yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
 yabai -m rule --add app="^LINE$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Hammerspoon$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
+yabai -m rule --add app="^iStat Menus$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Alfred Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Disk Utility$" sticky=on layer=above manage=off
 yabai -m rule --add app="^磁碟工具程式$" sticky=on layer=above manage=off
@@ -109,6 +110,7 @@ yabai -m rule --add app="^CiscoSparkHelper$" manage=off
 # testing signals
 # yabai -m signal --add event=window_destroyed action="terminal-notifier -message 'window_destroyed'"
 # yabai -m signal --add event=application_terminated action="terminal-notifier -message 'application_terminated'"
+# yabai -m signal --add event=window_focused action="yabai -m window --toggle zoom-fullscreen"
 
 ## If I close the active window, focus on any other visible window.
 yabai -m signal --add event=window_destroyed action="bash ~/.config/yabai/scripts/windowFocusOnDestroy.sh"
