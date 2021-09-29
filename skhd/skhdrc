@@ -172,12 +172,13 @@ alt + cmd - 0x2A : yabai -m space --balance
 ## full screen / un-full screen
 alt + cmd - space : yabai -m window --toggle zoom-fullscreen
 
-## swap window
+## swap window & move window in floating mode
 alt + cmd - left : yabai -m window --swap west || yabai -m window --grid 1:2:0:0:1:1
 alt + cmd - right : yabai -m window --swap east || yabai -m window --grid 1:2:1:0:1:1
 alt + cmd - up : yabai -m window --swap north || yabai -m window --grid 1:1:0:0:1:1;
 alt + cmd - down : yabai -m window --swap south || yabai -m window --grid 12:12:1:1:9:9;
 
+# move window in floating mode
 alt + cmd - home : yabai -m window --grid 2:2:0:0:1:1
 alt + cmd - end : yabai -m window --grid 2:2:1:1:1:1
 alt + cmd - pagedown : yabai -m window --grid 2:2:0:1:1:1
