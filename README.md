@@ -4,6 +4,11 @@ This repository contains my standalone Yabai and Skhd configurations.
 
 As tiling windows management, every times window created, it will allocate a space for it to avoid window overlap to each other.
 
+You'll never suffering messy window display for desktop.
+
+
+<img src="https://github.com/z20240/yabai/blob/master/assets/auto-split-window-by-focus.gif" height="500" /> 
+
 ## Installation
 
 ```shell
@@ -20,7 +25,7 @@ $ ln -s "${HOME}/.config/yabai/skhd/skhdrc" "${HOME}/.skhdrc"
 
 <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>r</kbd>
 
-### show/hide items on desktop
+### Show / hide items on desktop
 
 <kbd>cmd</kbd> + <kbd>f3</kbd>
 
@@ -29,6 +34,7 @@ $ ln -s "${HOME}/.config/yabai/skhd/skhdrc" "${HOME}/.skhdrc"
 <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>space</kbd>
 
 ### Move Windows
+
 |    Action   |                   Key Combination                   |
 |-------------|-----------------------------------------------------|
 | Move left   | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>left</kbd>   |
@@ -36,7 +42,10 @@ $ ln -s "${HOME}/.config/yabai/skhd/skhdrc" "${HOME}/.skhdrc"
 | Move up     | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>up</kbd>     |
 | Move down   | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>down</kbd>   |
 
+
+
 ### Focus Windows
+
 |    Action   |                            Key Combination                            |
 |-------------|-----------------------------------------------------------------------|
 | Focus left  | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>left</kbd>   |
@@ -44,7 +53,10 @@ $ ln -s "${HOME}/.config/yabai/skhd/skhdrc" "${HOME}/.skhdrc"
 | Focus up    | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>up</kbd>     |
 | Focus down  | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>down</kbd>   |
 
+
+
 ### Resize Windows
+
 |    Action    |                            Key Combination                              |
 |--------------|-------------------------------------------------------------------------|
 | Resize left  | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>home</kbd>     |
@@ -52,21 +64,31 @@ $ ln -s "${HOME}/.config/yabai/skhd/skhdrc" "${HOME}/.skhdrc"
 | Resize up    | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>pageUp</kbd>   |
 | Resize down  | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>pageDown</kbd> |
 
+
+
 ### Stack Windows
+
 |    Action    |                            Key Combination                            |
 |--------------|-----------------------------------------------------------------------|
 | Stack left   | <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>left</kbd>  |
 | Stack right  | <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>right</kbd> |
 
+
+
 ### Focus Windows (stack mode)
+
 |    Action   |                            Key Combination                           |
 |-------------|----------------------------------------------------------------------|
 | Focus up    | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>up</kbd>    |
 | Focus down  | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>down</kbd>  |
 
+
+
 ### Toggle float / Un-float mode window
 
 <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>space</kbd>
+
+
 
 ### Move Windows (floating mode)
 
@@ -82,30 +104,43 @@ $ ln -s "${HOME}/.config/yabai/skhd/skhdrc" "${HOME}/.skhdrc"
 | Move down left                | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>pageDown</kbd> |
 
 
+
 ### Send Window to Spaces
+
 |       Action        |                      Key Combination                    |
 |---------------------|---------------------------------------------------------|
 | Send to prev space  | <kbd>ctrl</kbd> + <kbd>cmd</kbd> + <kbd>left</kbd>      |
 | Send to next space  | <kbd>ctrl</kbd> + <kbd>cmd</kbd> + <kbd>right</kbd>     |
 | Send to space (1-9) | <kbd>ctrl</kbd> + <kbd>cmd</kbd> + <kbd>1 - 9</kbd>     |
 
+
+
 ### Send Window to Monitors (Displays)
+
 |         Action       |                      Key Combination                    |
 |----------------------|---------------------------------------------------------|
 | Send to prev monitor | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>left</kbd>      |
 | Send to next monitor | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>right</kbd>     |
 
+
+
 ### Focus Monitors (Displays)
+
 |         Action       |                Key Combination                  |
 |----------------------|-------------------------------------------------|
 | Focus monitor 1      | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>1</kbd> |
 | Focus monitor 2      | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>2</kbd> |
 | Focus monitor 3      | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>3</kbd> |
 
+
+
 ### Misc
+
 |         Action              |                            Key Combination                         |
 |-----------------------------|--------------------------------------------------------------------|
 | Window rotate clockwise     | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>r</kbd>                     |
 | Window rotate anticlockwise | <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>r</kbd>  |
 | Window Equalize size        | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>\|</kbd>                    |
 | Enable / Disable gaps       | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>g</kbd>                     |
+
+
