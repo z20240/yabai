@@ -79,8 +79,8 @@ $ ln -s "${HOME}/.config/yabai/skhd/skhdrc" "${HOME}/.skhdrc"
 
 |    Action   |                            Key Combination                           |
 |-------------|----------------------------------------------------------------------|
-| Focus up    | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>up</kbd>    |
-| Focus down  | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>down</kbd>  |
+| Focus up    | <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>up</kbd>   |
+| Focus down  | <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>down</kbd> |
 
 
 
