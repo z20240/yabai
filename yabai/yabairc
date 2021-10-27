@@ -74,6 +74,8 @@ yabai -m rule --add app="^LINE$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Hammerspoon$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
 yabai -m rule --add app="^iStat Menus$" sticky=on layer=above manage=off
+# https://www.cockos.com/licecap/
+yabai -m rule --add app="^licecap$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Alfred Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Disk Utility$" sticky=on layer=above manage=off
 yabai -m rule --add app="^磁碟工具程式$" sticky=on layer=above manage=off
