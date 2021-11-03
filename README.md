@@ -7,7 +7,7 @@ As tiling windows management, every times window created, it will allocate a spa
 You'll never suffering messy window display for desktop.
 
 
-<img src="https://github.com/z20240/yabai/blob/master/assets/auto-split-window-by-focus.gif" height="500" /> 
+<img src="https://github.com/z20240/yabai/blob/master/assets/auto-split-window-by-focus.gif" height="500" />
 
 ## Installation
 
@@ -35,23 +35,23 @@ $ ln -s "${HOME}/.config/yabai/skhd/skhdrc" "${HOME}/.skhdrc"
 
 ### Move Windows
 
-|    Action   |                   Key Combination                   |
-|-------------|-----------------------------------------------------|
-| Move left   | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>left</kbd>   |
-| Move right  | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>right</kbd>  |
-| Move up     | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>up</kbd>     |
-| Move down   | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>down</kbd>   |
+|    Action   |                            Key Combination                            |
+|-------------|-----------------------------------------------------------------------|
+| Move left   | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>left</kbd>   |
+| Move right  | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>right</kbd>  |
+| Move up     | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>up</kbd>     |
+| Move down   | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>down</kbd>   |
 
 
 
 ### Focus Windows
 
-|    Action   |                            Key Combination                            |
-|-------------|-----------------------------------------------------------------------|
-| Focus left  | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>left</kbd>   |
-| Focus right | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>right</kbd>  |
-| Focus up    | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>up</kbd>     |
-| Focus down  | <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>down</kbd>   |
+|    Action   |                   Key Combination                   |
+|-------------|-----------------------------------------------------|
+| Focus left  | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>left</kbd>   |
+| Focus right | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>right</kbd>  |
+| Focus up    | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>up</kbd>     |
+| Focus down  | <kbd>alt</kbd> + <kbd>cmd</kbd> + <kbd>down</kbd>   |
 
 
 

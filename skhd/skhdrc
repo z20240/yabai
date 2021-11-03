@@ -172,11 +172,11 @@ alt + cmd - 0x2A : yabai -m space --balance
 ## full screen / un-full screen
 alt + cmd - space : yabai -m window --toggle zoom-fullscreen
 
-## swap window & move window in floating mode
-alt + cmd - left : yabai -m window --swap west || yabai -m window --grid 1:2:0:0:1:1
-alt + cmd - right : yabai -m window --swap east || yabai -m window --grid 1:2:1:0:1:1
-alt + cmd - up : yabai -m window --swap north || yabai -m window --grid 1:1:0:0:1:1;
-alt + cmd - down : yabai -m window --swap south || yabai -m window --grid 12:12:1:1:9:9;
+## focus window
+alt + cmd - left : yabai -m window --focus west
+alt + cmd - right : yabai -m window --focus east
+alt + cmd - up : yabai -m window --focus north
+alt + cmd - down : yabai -m window --focus south
 
 # move window in floating mode
 alt + cmd - home : yabai -m window --grid 2:2:0:0:1:1
@@ -205,11 +205,11 @@ shift + alt + cmd - right : yabai -m window east --stack $(yabai -m query --wind
 shift + alt + cmd - up : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
 shift + alt + cmd - down : yabai -m window --focus stack.next || yabai -m window --focus stack.first
 
-## focus window
-ctrl + alt + cmd - left : yabai -m window --focus west
-ctrl + alt + cmd - right : yabai -m window --focus east
-ctrl + alt + cmd - up : yabai -m window --focus north
-ctrl + alt + cmd - down : yabai -m window --focus south
+## swap window & move window in floating mode
+ctrl + alt + cmd - left : yabai -m window --swap west || yabai -m window --grid 1:2:0:0:1:1
+ctrl + alt + cmd - right : yabai -m window --swap east || yabai -m window --grid 1:2:1:0:1:1
+ctrl + alt + cmd - up : yabai -m window --swap north || yabai -m window --grid 1:1:0:0:1:1;
+ctrl + alt + cmd - down : yabai -m window --swap south || yabai -m window --grid 12:12:1:1:9:9;
 
 ## window resize
 ctrl + alt + cmd - home : yabai -m window --resize left:-20:0 || yabai -m window --resize right:-20:0
