@@ -48,10 +48,10 @@ yabai -m config mouse_drop_action            stack
 # bsp or float (default: bsp)
 yabai -m config layout                       bsp
 ## Change how yabai looks
-yabai -m config top_padding                  08
-yabai -m config bottom_padding               08
-yabai -m config left_padding                 08
-yabai -m config right_padding                08
+yabai -m config top_padding                  32
+yabai -m config bottom_padding               16
+yabai -m config left_padding                 16
+yabai -m config right_padding                16
 yabai -m config window_gap                   16
 
 # My custom space names for my 3 monitor setup. These names are used in some of my scripts.
