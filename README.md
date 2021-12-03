@@ -12,14 +12,50 @@ You'll never suffering messy window display for desktop.
 ## Installation
 
 ```shell
-# Remove previous links
+# --- install yabai, skhd, jq
+$ brew install koekeishiya/formulae/yabai
+$ brew install jq
+$ brew install koekeishiya/formulae/skhd
+
+
+# --- Remove previous links
 $ rm -f "${HOME}"/.{yabai,skhd}rc
 
-# Install configs
+# --- Install configs
 $ git clone https://github.com/z20240/yabai.git "${HOME}"/.config/yabai
 $ ln -s "${HOME}/.config/yabai/yabai/yabairc" "${HOME}/.yabairc"
 $ ln -s "${HOME}/.config/yabai/skhd/skhdrc" "${HOME}/.skhdrc"
+
+# --- Will automatically start Yabai & Skhd when computer starts
+$ brew services start yabai
+$ brew services start skhd
+
+# --- (options) Install stackline part. --- #
+### stackline can show icons aside by your stacked windows to announce the stack windows.
+$ brew install hammerspoon --cask
+
+# Install stackline (https://github.com/AdamWagner/stackline)
+# Get the repo
+$ git clone https://github.com/AdamWagner/stackline.git ~/.hammerspoon/stackline
+
+# Make stackline run when hammerspoon launches
+$ cd ~/.hammerspoon
+
+$ cp ~/.hammerspoon/stackline/conf.lua ~/.hammerspoon/stakeline_config.lua
+
+
+# **Hint**: If your mac is M1 structure - you have to change the code below
+# -- in stackline/conf.lua
+# c.paths.yabai = '/opt/homebrew/bin/yabai' -- silicon mac, M1
+# c.paths.yabai = '/usr/local/bin/yabai'    -- intel version.
+echo 'stackline = require "stackline"' >> init.lua
+echo 'local stackline_config = require "stackline_config"' >> init.lua
+echo 'stackline:init(stackline_config)' >> init.lua
 ```
+
+
+
+
 ## Keyboard Shortcuts
 ### Reload / restart the yabai launch agent
 
