@@ -48,10 +48,10 @@ yabai -m config mouse_drop_action            stack
 # bsp or float (default: bsp)
 yabai -m config layout                       bsp
 ## Change how yabai looks
-yabai -m config top_padding                  32
-yabai -m config bottom_padding               16
-yabai -m config left_padding                 16
-yabai -m config right_padding                16
+yabai -m config top_padding                  14
+yabai -m config bottom_padding               14
+yabai -m config left_padding                 14
+yabai -m config right_padding                14
 yabai -m config window_gap                   16
 
 # My custom space names for my 3 monitor setup. These names are used in some of my scripts.
@@ -70,7 +70,7 @@ yabai -m rule --add app="^系統資訊$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
 yabai -m rule --add app="^活動監視器$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
-yabai -m rule --add app="^LINE$" sticky=on layer=above manage=off
+yabai -m rule --add app="^LINE$" sticky=on layer=normal manage=off
 yabai -m rule --add app="^Hammerspoon$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
 yabai -m rule --add app="^iStat Menus$" sticky=on layer=above manage=off
