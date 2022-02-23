@@ -90,6 +90,8 @@ yabai -m rule --add app="^perl_client_app$" manage=off
 yabai -m rule --add app="^CiscoSparkHelper$" manage=off
 yabai -m rule --add app="ygo|YGO" manage=off
 yabai -m rule --add app="^MyCard$" manage=off
+yabai -m rule --add app="^富途牛牛$" manage=off
+yabai -m rule --add app="^TradingView$" manage=off
 # yabai -m rule --add app="^Logi Options$" manage=off
 # yabai -m rule --add app="^Cisco Webex Start$" manage=off
 # yabai -m rule --add app="^Private Internet Access$" manage=off
