@@ -173,10 +173,10 @@ alt + cmd - 0x2A : yabai -m space --balance
 alt + cmd - space : yabai -m window --toggle zoom-fullscreen
 
 ## focus window
-alt + cmd - left : yabai -m window --focus west || yabai -m window --grid 1:2:0:0:1:1
-alt + cmd - right : yabai -m window --focus east || yabai -m window --grid 1:2:1:0:1:1
-alt + cmd - up : yabai -m window --focus north || yabai -m window --grid 1:1:0:0:1:1;
-alt + cmd - down : yabai -m window --focus south || yabai -m window --grid 12:12:1:1:9:9;
+alt + cmd - left : sh ~/.config/yabai/scripts/focusWindow.sh left
+alt + cmd - right : sh ~/.config/yabai/scripts/focusWindow.sh right
+alt + cmd - up : sh ~/.config/yabai/scripts/focusWindow.sh up
+alt + cmd - down : sh ~/.config/yabai/scripts/focusWindow.sh down
 
 # move window in floating mode
 alt + cmd - home : yabai -m window --grid 2:2:0:0:1:1
