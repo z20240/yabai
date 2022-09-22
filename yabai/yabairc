@@ -63,6 +63,12 @@ yabai -m space 5 --label five
 yabai -m space 6 --label six
 yabai -m space 9 --label nine
 
+# # add 20 padding to the top and 0 padding to the bottom of every space located on the main display
+yabai -m config external_bar all:20:0
+# yabai -m config external_bar main:20:0
+# add 20 padding to the top and bottom of all spaces regardless of the display it belongs to
+# yabai -m config external_bar all:20:20
+
 # float system preferences. Most of these just diable Yabai form resizing them.
 yabai -m rule --add app="^系統偏好設定$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
