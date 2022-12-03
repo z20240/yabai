@@ -39,10 +39,14 @@ else
       yabai -m window --focus east
       ;;
     'up')
-      yabai -m window --focus north
+      # yabai -m window --focus north
+      # focus stack
+      yabai -m window --focus stack.prev || yabai -m window --focus stack.last
       ;;
     'down')
-      yabai -m window --focus south
+      # yabai -m window --focus south
+      # focus stack
+      yabai -m window --focus stack.next || yabai -m window --focus stack.first
       ;;
     *)
       ;;

@@ -137,10 +137,16 @@ yabai -m rule --add app="^Telegram$" manage=off
 # yabai -m signal --add event=window_focused action="yabai -m window --toggle zoom-fullscreen"
 
 ## If I close the active window, focus on any other visible window.
-yabai -m signal --add event=window_destroyed action="bash ~/.config/yabai/scripts/windowFocusOnDestroy.sh"
+yabai -m signal --add event=window_destroyed action="bash ~/.config/yabai/scripts/window_focus_on_destroy.sh"
+yabai -m signal --add event=window_created action="sh ~/.config/yabai/scripts/stack_to_binary.sh $YABAI_WINDOW_ID"
+yabai -m signal --add event=application_activated action="sh ~/.config/yabai/scripts/stack_to_binary.sh $YABAI_PROCESS_ID"
+yabai -m signal --add event=application_launched action="sh ~/.config/yabai/scripts/stack_to_binary.sh $YABAI_PROCESS_ID"
 
-# yabai -m signal --add event=space_changed action="export CUR_ACTIVE_APP=\"iTerm2\""
+### ======= Run binary stack while yabai is loaded ======== ###
+sh ~/.config/yabai/scripts/stack_to_binary.sh
+
 
 echo "yabai configuration loaded.."
+# terminal-notifier -message 'yabai configuration loaded..'
 
 #END
