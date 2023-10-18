@@ -12,8 +12,11 @@
 # see this wiki page for information:
 #  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 #
-# sudo yabai --load-sa
-# yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+# for this to work you must configure sudo such that
+# it will be able to run the command without password
+
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
 
 ## global settings
 yabai -m config external_bar                 off
@@ -100,6 +103,11 @@ yabai -m rule --add app="^MyCard$" manage=off
 yabai -m rule --add app="^富途牛牛$" manage=off
 yabai -m rule --add app="^TradingView$" manage=off
 yabai -m rule --add app="^Vivaldi$" manage=off
+yabai -m rule --add app="^Simulator$" layer=above manage=on
+yabai -m rule --add app="^qemu-system-aarch64$" manage=off
+yabai -m rule --add app="^installer$" manage=off
+yabai -m rule --add app="^YGO Omega$" manage=off
+yabai -m rule --add app="^Telegram$" manage=off
 # yabai -m rule --add app="^Google Chrome$" manage=off
 # yabai -m rule --add app="^Logi Options$" manage=off
 # yabai -m rule --add app="^Cisco Webex Start$" manage=off
