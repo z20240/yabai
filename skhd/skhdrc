@@ -161,7 +161,7 @@
 cmd - f3: sh ~/.config/yabai/scripts/taggle_show_hide_desktop.sh
 
 ## Quickly restart the yabai launch agent (快速重啟 yabai & skhd)
-ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai" && launchctl kickstart -k "gui/${UID}/homebrew.mxcl.skhd"
+ctrl + alt + cmd - r : yabai --restart-service && launchctl kickstart -k "gui/${UID}/homebrew.mxcl.skhd"
 ctrl + alt + cmd - t : sh ~/.config/yabai/scripts/stack_to_binary.sh
 
 ## Close active application (快速關閉視窗)
