@@ -75,6 +75,8 @@ yabai -m config external_bar all:20:0
 # float system preferences. Most of these just diable Yabai form resizing them.
 yabai -m rule --add app="^WooTechy iMoveGo$" sticky=on layer=above manage=off
 yabai -m rule --add app="^系統偏好設定$" sticky=on layer=above manage=off
+yabai -m rule --add app="^WooTechy iMoveGo$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Stickies$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^系統資訊$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
