@@ -74,6 +74,7 @@ yabai -m config external_bar all:20:0
 
 # float system preferences. Most of these just diable Yabai form resizing them.
 yabai -m rule --add app="^WooTechy iMoveGo$" sticky=on layer=above manage=off
+yabai -m rule --add app="^UltFone iOS Location Changer$" sticky=on layer=above manage=off
 yabai -m rule --add app="^系統偏好設定$" sticky=on layer=above manage=off
 yabai -m rule --add app="^WooTechy iMoveGo$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Stickies$" sticky=on layer=above manage=off
@@ -87,6 +88,7 @@ yabai -m rule --add app="^Hammerspoon$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
 yabai -m rule --add app="^計算機$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Calculator$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Wuthering Waves$" sticky=on layer=above manage=off
 # https://www.cockos.com/licecap/
 yabai -m rule --add app="^licecap$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Alfred Preferences$" sticky=on layer=above manage=off
@@ -111,6 +113,7 @@ yabai -m rule --add app="^qemu-system-aarch64$" manage=off
 yabai -m rule --add app="^installer$" manage=off
 yabai -m rule --add app="^YGO Omega$" manage=off
 yabai -m rule --add app="^Telegram$" manage=off
+yabai -m rule --add app="^DaisyDisk$" manage=off
 # yabai -m rule --add app="^Google Chrome$" manage=off
 # yabai -m rule --add app="^Logi Options$" manage=off
 # yabai -m rule --add app="^Cisco Webex Start$" manage=off
