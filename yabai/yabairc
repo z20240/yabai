@@ -73,48 +73,48 @@ yabai -m config external_bar all:20:0
 # yabai -m config external_bar all:20:20
 
 # float system preferences. Most of these just diable Yabai form resizing them.
-yabai -m rule --add app="^系統偏好設定$" sticky=on layer=above manage=off
-yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
-yabai -m rule --add app="^系統資訊$" sticky=on layer=above manage=off
-yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
-yabai -m rule --add app="^活動監視器$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
-yabai -m rule --add app="^LINE$" sticky=on layer=normal manage=off
-yabai -m rule --add app="^Hammerspoon$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
-yabai -m rule --add app="^計算機$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Calculator$" sticky=on layer=above manage=off
-# https://www.cockos.com/licecap/
-yabai -m rule --add app="^licecap$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Alfred Preferences$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Disk Utility$" sticky=on layer=above manage=off
-yabai -m rule --add app="^磁碟工具程式$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Path Finder$" manage=off
-yabai -m rule --add app="^TeamViewer$" sticky=off layer=above manage=off
-yabai -m rule --add app="^AppCleaner$" sticky=off layer=above manage=off
-yabai -m rule --add app="^iStat Menus$" sticky=off layer=above manage=off
-yabai -m rule --add app="^iStat Menus$" manage=off
-yabai -m rule --add app="^Flux$" manage=off
-yabai -m rule --add app="^Time Out$" manage=off
-yabai -m rule --add app="^perl_client_app$" manage=off
-yabai -m rule --add app="^CiscoSparkHelper$" manage=off
+yabai -m rule --add app=LINE manage=off
+yabai -m rule --add app="系統偏好設定" manage=off
+yabai -m rule --add app="System Preferences" manage=off
 yabai -m rule --add app="ygo|YGO" manage=off
-yabai -m rule --add app="^MyCard$" manage=off
-yabai -m rule --add app="^富途牛牛$" manage=off
-yabai -m rule --add app="^TradingView$" manage=off
-yabai -m rule --add app="^Vivaldi$" manage=off
-yabai -m rule --add app="^Simulator$" layer=above manage=on
-yabai -m rule --add app="^qemu-system-aarch64$" manage=off
-yabai -m rule --add app="^installer$" manage=off
-yabai -m rule --add app="^YGO Omega$" manage=off
-yabai -m rule --add app="^Telegram$" manage=off
+yabai -m rule --add app="系統資訊" manage=off
+yabai -m rule --add app="System Information" manage=off
+yabai -m rule --add app="活動監視器" manage=off
+yabai -m rule --add app="Activity Monitor" manage=off
+yabai -m rule --add app="Hammerspoon" manage=off
+yabai -m rule --add app="Finder" manage=off
+yabai -m rule --add app="計算機" manage=off
+yabai -m rule --add app="Calculator" manage=off
+# https://www.cockos.com/licecap/
+yabai -m rule --add app="licecap" manage=off
+yabai -m rule --add app="Alfred Preferences" manage=off
+yabai -m rule --add app="Disk Utility" manage=off
+yabai -m rule --add app="磁碟工具程式" manage=off
+yabai -m rule --add app="Path Finder" manage=off
+yabai -m rule --add app="TeamViewer" manage=off
+yabai -m rule --add app="AppCleaner" manage=off
+yabai -m rule --add app="iStat Menus" manage=off
+yabai -m rule --add app="iStat Menus" manage=off
+yabai -m rule --add app="Flux" manage=off
+yabai -m rule --add app="Time Out" manage=off
+yabai -m rule --add app="perl_client_app" manage=off
+yabai -m rule --add app="CiscoSparkHelper" manage=off
+yabai -m rule --add app="MyCard" manage=off
+yabai -m rule --add app="富途牛牛" manage=off
+yabai -m rule --add app="TradingView" manage=off
+yabai -m rule --add app="Vivaldi" manage=off
+yabai -m rule --add app="Simulator" manage=off
+yabai -m rule --add app="qemu-system-aarch64" manage=off
+yabai -m rule --add app="installer" manage=off
+yabai -m rule --add app="YGO Omega" manage=off
+yabai -m rule --add app="Telegram" manage=off
 # yabai -m rule --add app="^Google Chrome$" manage=off
 # yabai -m rule --add app="^Logi Options$" manage=off
 # yabai -m rule --add app="^Cisco Webex Start$" manage=off
 # yabai -m rule --add app="^Private Internet Access$" manage=off
-# yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
-# yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
-# yabai -m rule --add app="^Keka$" sticky=on layer=above manage=off
+# yabai -m rule --add app="^Karabiner-Elements$" manage=off
+# yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
+# yabai -m rule --add app="^Keka$" manage=off
 # yabai -m rule --add app="Fantastical" manage=off
 # yabai -m rule --add app="^Spotify$" manage=off
 # yabai -m rule --add app="^console$" manage=off

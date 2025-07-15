@@ -161,7 +161,7 @@
 cmd - f3: sh ~/.config/yabai/scripts/taggleShowHideDesktop.sh
 
 ## Quickly restart the yabai launch agent (快速重啟 yabai & skhd)
-ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai" && launchctl kickstart -k "gui/${UID}/homebrew.mxcl.skhd"
+ctrl + alt + cmd - r : yabai --stop-service && yabai --start-service && skhd --reload
 
 ## Close active application (快速關閉視窗)
 alt + cmd - backspace : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
