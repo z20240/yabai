@@ -15,6 +15,41 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
+# Window rules — register and apply before layout bsp (required since yabai v7)
+# float system preferences. Most of these just diable Yabai form resizing them.
+yabai -m rule --add app="Gifski" manage=off
+yabai -m rule --add app=LINE manage=off
+yabai -m rule --add app="System Preferences" manage=off
+yabai -m rule --add app="ygo|YGO" manage=off
+yabai -m rule --add app="System Information" manage=off
+yabai -m rule --add app="Activity Monitor" manage=off
+yabai -m rule --add app="Hammerspoon" manage=off
+yabai -m rule --add app="Finder" manage=off
+yabai -m rule --add app="Calculator" manage=off
+# https://www.cockos.com/licecap/
+yabai -m rule --add app="licecap" manage=off
+yabai -m rule --add app="Alfred Preferences" manage=off
+yabai -m rule --add app="Disk Utility" manage=off
+yabai -m rule --add app="Path Finder" manage=off
+yabai -m rule --add app="TeamViewer" manage=off
+yabai -m rule --add app="AppCleaner" manage=off
+yabai -m rule --add app="iStat Menus" manage=off
+yabai -m rule --add app="iStat Menus" manage=off
+yabai -m rule --add app="Flux" manage=off
+yabai -m rule --add app="Time Out" manage=off
+yabai -m rule --add app="perl_client_app" manage=off
+yabai -m rule --add app="CiscoSparkHelper" manage=off
+yabai -m rule --add app="MyCard" manage=off
+yabai -m rule --add app="TradingView" manage=off
+yabai -m rule --add app="Vivaldi" manage=off
+yabai -m rule --add app="Simulator" manage=off
+yabai -m rule --add app="qemu-system-aarch64" manage=off
+yabai -m rule --add app="installer" manage=off
+yabai -m rule --add app="YGO Omega" manage=off
+yabai -m rule --add app="Telegram" manage=off
+
+yabai -m rule --apply
+
 ## global settings
 yabai -m config external_bar                 off
 yabai -m config mouse_follows_focus          off
@@ -51,7 +86,6 @@ yabai -m config layout                       bsp
 # # add 0 padding to the top and 0 padding to the bottom of every space located on the main display
 # yabai -m config external_bar all:0:0
 # yabai -m config external_bar main:20:0
-yabai -m config external_bar off
 
 ## Change how yabai looks (the padding is the space between the window and the screen edge)
 yabai -m config top_padding                  12
@@ -69,54 +103,6 @@ yabai -m space 4 --label four
 yabai -m space 5 --label five
 yabai -m space 6 --label six
 yabai -m space 9 --label nine
-
-# float system preferences. Most of these just diable Yabai form resizing them.
-yabai -m rule --add app=LINE manage=off
-yabai -m rule --add app="系統偏好設定" manage=off
-yabai -m rule --add app="System Preferences" manage=off
-yabai -m rule --add app="ygo|YGO" manage=off
-yabai -m rule --add app="系統資訊" manage=off
-yabai -m rule --add app="System Information" manage=off
-yabai -m rule --add app="活動監視器" manage=off
-yabai -m rule --add app="Activity Monitor" manage=off
-yabai -m rule --add app="Hammerspoon" manage=off
-yabai -m rule --add app="Finder" manage=off
-yabai -m rule --add app="計算機" manage=off
-yabai -m rule --add app="Calculator" manage=off
-# https://www.cockos.com/licecap/
-yabai -m rule --add app="licecap" manage=off
-yabai -m rule --add app="Alfred Preferences" manage=off
-yabai -m rule --add app="Disk Utility" manage=off
-yabai -m rule --add app="磁碟工具程式" manage=off
-yabai -m rule --add app="Path Finder" manage=off
-yabai -m rule --add app="TeamViewer" manage=off
-yabai -m rule --add app="AppCleaner" manage=off
-yabai -m rule --add app="iStat Menus" manage=off
-yabai -m rule --add app="iStat Menus" manage=off
-yabai -m rule --add app="Flux" manage=off
-yabai -m rule --add app="Time Out" manage=off
-yabai -m rule --add app="perl_client_app" manage=off
-yabai -m rule --add app="CiscoSparkHelper" manage=off
-yabai -m rule --add app="MyCard" manage=off
-yabai -m rule --add app="富途牛牛" manage=off
-yabai -m rule --add app="TradingView" manage=off
-yabai -m rule --add app="Vivaldi" manage=off
-yabai -m rule --add app="Simulator" manage=off
-yabai -m rule --add app="qemu-system-aarch64" manage=off
-yabai -m rule --add app="installer" manage=off
-yabai -m rule --add app="YGO Omega" manage=off
-yabai -m rule --add app="Telegram" manage=off
-# yabai -m rule --add app="^Google Chrome$" manage=off
-# yabai -m rule --add app="^Logi Options$" manage=off
-# yabai -m rule --add app="^Cisco Webex Start$" manage=off
-# yabai -m rule --add app="^Private Internet Access$" manage=off
-# yabai -m rule --add app="^Karabiner-Elements$" manage=off
-# yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
-# yabai -m rule --add app="^Keka$" manage=off
-# yabai -m rule --add app="Fantastical" manage=off
-# yabai -m rule --add app="^Spotify$" manage=off
-# yabai -m rule --add app="^console$" manage=off
-# yabai -m rule --add app="^Harvest$" manage=off
 
 # find ~/Library/Parallels/Applications\ Menus/ -maxdepth 3 -type f | awk -F'/' '{ print $NF; }' | awk '{$1=$1};1' | sort | uniq | tr "\n" "\0" | xargs -0 -I{} yabai -m rule --add app="^{}\$" title=".*" manage=on
 
