@@ -20,6 +20,7 @@ sudo yabai --load-sa
 yabai -m rule --add app="Gifski" manage=off
 yabai -m rule --add app=LINE manage=off
 yabai -m rule --add app="System Preferences" manage=off
+yabai -m rule --add app="System Settings" manage=off
 yabai -m rule --add app="ygo|YGO" manage=off
 yabai -m rule --add app="System Information" manage=off
 yabai -m rule --add app="Activity Monitor" manage=off
