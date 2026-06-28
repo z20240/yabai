@@ -50,6 +50,7 @@ yabai -m rule --add app="qemu-system-aarch64" manage=off sub-layer=normal
 yabai -m rule --add app="installer" manage=off sub-layer=normal
 yabai -m rule --add app="YGO Omega" manage=off sub-layer=normal
 yabai -m rule --add app="Telegram" manage=off sub-layer=normal
+yabai -m rule --add app="Raycast" manage=off sub-layer=normal
 yabai -m rule --add app=".*" sub-layer=normal
 
 yabai -m rule --apply
