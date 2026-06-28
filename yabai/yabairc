@@ -16,38 +16,41 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
 # Window rules — register and apply before layout bsp (required since yabai v7)
+# manage=off: yabai ignores tiling. sub-layer=normal: opt out of v7 auto layer
+# (v7 puts tiled windows on sub-layer=below and floats on normal → floats always on top).
 # float system preferences. Most of these just diable Yabai form resizing them.
-yabai -m rule --add app="Gifski" manage=off
-yabai -m rule --add app=LINE manage=off
-yabai -m rule --add app="System Preferences" manage=off
-yabai -m rule --add app="System Settings" manage=off
-yabai -m rule --add app="ygo|YGO" manage=off
-yabai -m rule --add app="System Information" manage=off
-yabai -m rule --add app="Activity Monitor" manage=off
-yabai -m rule --add app="Hammerspoon" manage=off
-yabai -m rule --add app="Finder" manage=off
-yabai -m rule --add app="Calculator" manage=off
+yabai -m rule --add app="Gifski" manage=off sub-layer=normal
+yabai -m rule --add app=LINE manage=off sub-layer=normal
+yabai -m rule --add app="System Preferences" manage=off sub-layer=normal
+yabai -m rule --add app="System Settings" manage=off sub-layer=normal
+yabai -m rule --add app="ygo|YGO" manage=off sub-layer=normal
+yabai -m rule --add app="System Information" manage=off sub-layer=normal
+yabai -m rule --add app="Activity Monitor" manage=off sub-layer=normal
+yabai -m rule --add app="Hammerspoon" manage=off sub-layer=normal
+yabai -m rule --add app="Finder" manage=off sub-layer=normal
+yabai -m rule --add app="Calculator" manage=off sub-layer=normal
 # https://www.cockos.com/licecap/
-yabai -m rule --add app="licecap" manage=off
-yabai -m rule --add app="Alfred Preferences" manage=off
-yabai -m rule --add app="Disk Utility" manage=off
-yabai -m rule --add app="Path Finder" manage=off
-yabai -m rule --add app="TeamViewer" manage=off
-yabai -m rule --add app="AppCleaner" manage=off
-yabai -m rule --add app="iStat Menus" manage=off
-yabai -m rule --add app="iStat Menus" manage=off
-yabai -m rule --add app="Flux" manage=off
-yabai -m rule --add app="Time Out" manage=off
-yabai -m rule --add app="perl_client_app" manage=off
-yabai -m rule --add app="CiscoSparkHelper" manage=off
-yabai -m rule --add app="MyCard" manage=off
-yabai -m rule --add app="TradingView" manage=off
-yabai -m rule --add app="Vivaldi" manage=off
-yabai -m rule --add app="Simulator" manage=off
-yabai -m rule --add app="qemu-system-aarch64" manage=off
-yabai -m rule --add app="installer" manage=off
-yabai -m rule --add app="YGO Omega" manage=off
-yabai -m rule --add app="Telegram" manage=off
+yabai -m rule --add app="licecap" manage=off sub-layer=normal
+yabai -m rule --add app="Alfred Preferences" manage=off sub-layer=normal
+yabai -m rule --add app="Disk Utility" manage=off sub-layer=normal
+yabai -m rule --add app="Path Finder" manage=off sub-layer=normal
+yabai -m rule --add app="TeamViewer" manage=off sub-layer=normal
+yabai -m rule --add app="AppCleaner" manage=off sub-layer=normal
+yabai -m rule --add app="iStat Menus" manage=off sub-layer=normal
+yabai -m rule --add app="iStat Menus" manage=off sub-layer=normal
+yabai -m rule --add app="Flux" manage=off sub-layer=normal
+yabai -m rule --add app="Time Out" manage=off sub-layer=normal
+yabai -m rule --add app="perl_client_app" manage=off sub-layer=normal
+yabai -m rule --add app="CiscoSparkHelper" manage=off sub-layer=normal
+yabai -m rule --add app="MyCard" manage=off sub-layer=normal
+yabai -m rule --add app="TradingView" manage=off sub-layer=normal
+yabai -m rule --add app="Vivaldi" manage=off sub-layer=normal
+yabai -m rule --add app="Simulator" manage=off sub-layer=normal
+yabai -m rule --add app="qemu-system-aarch64" manage=off sub-layer=normal
+yabai -m rule --add app="installer" manage=off sub-layer=normal
+yabai -m rule --add app="YGO Omega" manage=off sub-layer=normal
+yabai -m rule --add app="Telegram" manage=off sub-layer=normal
+yabai -m rule --add app=".*" sub-layer=normal
 
 yabai -m rule --apply
 
@@ -57,8 +60,7 @@ yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
 ## New window spawns to the right if vertical split, or bottom if horizontal split
 yabai -m config window_placement             second_child
-## floating windows are always on top (default: off)
-yabai -m config window_topmost               on
+## v7 removed window_topmost; stacking is controlled via sub-layer rules above
 ## example: show shadows only for floating windows
 yabai -m config window_shadow                on
 yabai -m config window_opacity               off
