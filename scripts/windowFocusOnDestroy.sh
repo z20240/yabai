@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/bash
 
 isFocused=$(yabai -m query --windows --window | jq -re ".id")
 echo $isFocused

@@ -1,19 +1,16 @@
 #!/usr/bin/env sh
 # YABAI STUFF
 
-# the scripting-addition must be loaded manually if
-# you are running yabai on macOS Big Sur. Uncomment
-# the following line to have the injection performed
-# when the config is executed during startup.
+# Scripting addition must be injected as root (Dock.app). yabai itself stays a
+# normal user process — it cannot run `yabai --load-sa` without sudo/root.
 #
-# for this to work you must configure sudo such that
-# it will be able to run the command without password
+# Configure passwordless sudo once so the service never prompts for a password:
+#   sudo visudo -f /etc/sudoers.d/yabai
+#   peiningli ALL=(root) NOPASSWD: /opt/homebrew/bin/yabai --load-sa
+#   sudo chmod 0440 /etc/sudoers.d/yabai
 #
-# see this wiki page for information:
-#  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
-#
-# for this to work you must configure sudo such that
-# it will be able to run the command without password
+# Verify: sudo -n yabai --load-sa   (must succeed silently)
+# https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
@@ -51,11 +48,12 @@ yabai -m config mouse_drop_action            stack
 # bsp or float (default: bsp)
 yabai -m config layout                       bsp
 ## Change how yabai looks
-yabai -m config top_padding                  14
-yabai -m config bottom_padding               14
-yabai -m config left_padding                 14
-yabai -m config right_padding                14
-yabai -m config window_gap                   16
+yabai -m config top_padding                  16
+yabai -m config bottom_padding               16
+yabai -m config left_padding                 24
+yabai -m config right_padding                24
+# set gap between each windows
+yabai -m config window_gap                   8
 
 # My custom space names for my 3 monitor setup. These names are used in some of my scripts.
 yabai -m space 1 --label one

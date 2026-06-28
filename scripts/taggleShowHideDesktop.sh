@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/bash
 
 is_hide_desktop=$(defaults read com.apple.finder CreateDesktop)
 

@@ -1,18 +1,15 @@
 #!/bin/sh
-curWindowId="$(yabai -m query --windows --window | jq -re ".id")"
-
 inputAction=$1
 
 case $inputAction in
 'display')
-  $(yabai -m window --display next || yabai -m window --display first)
+  yabai -m window --display next --focus 2>/dev/null || yabai -m window --display first --focus
   ;;
 'space')
-  $(yabai -m window --space next || yabai -m window --space first)
+  sh ~/.config/yabai/scripts/moveWindowOnDisplaySpace.sh next
   ;;
 *)
-  $(yabai -m window --space $inputAction)
+  wid=$(yabai -m query --windows --window | jq -re '.id')
+  sh ~/.config/yabai/scripts/moveWindowToSpace.sh "$wid" "$inputAction"
   ;;
 esac
-
-$(yabai -m window --focus "$curWindowId")
